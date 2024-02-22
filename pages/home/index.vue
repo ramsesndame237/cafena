@@ -14,11 +14,18 @@
       </p>
       <div class=" mt-14 max-w-80 flex items-center justify-between md:h-11  ">
         <button class=" h-full bg-secondary w-32 text-white text-base shadow-lg ">Explore More</button>
-        <button class="border border-[#D48A5C] w-32 h-full bg-white text-black shadow-lg" >Read More</button>
+        <button class="border border-[#D48A5C] w-32 h-full bg-white text-black shadow-lg">Read More</button>
       </div>
     </div>
     <div class="max-w-lg md:min-h-96 cursor-pointer  grow ">
-      <NuxtImg src="/images/hero_section.png" class="w-full h-full object-right aspect-square object-cover" />
+      <NuxtImg src="/images/hero_section.png" class="w-full h-full object-right aspect-square object-cover"/>
+    </div>
+  </section>
+  <section>
+    <div class="max-w-sm bg-[#D48A5C] max-h-64 min-h-60 h-auto relative">
+      <div class="max-w-sm  max-h-64 min-h-60 absolute -top-8 -right-6">
+        <CardProductCard title="Best Coffee Flavor" image="service_1.jpeg" description="Curabitur semper erat a lacusey sedny consequat,sit ametey." />
+      </div>
     </div>
   </section>
 </template>
