@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type {IheaderMenu} from "~/interfaces/app";
+import type {IHeaderMenu} from "~/interfaces/app";
 
-const headerMenu: IheaderMenu[] = [
+const headerMenu: IHeaderMenu[] = [
   {
     uri: '/about',
     name: 'About'

@@ -1,4 +1,23 @@
 <script setup lang="ts">
+import type {IProductService} from "~/interfaces/app";
+
+const productService: IProductService[] = [
+  {
+    title: 'Best Coffee Flavor',
+    image: 'service_1.jpeg',
+    description: "Curabitur semper erat a lacusey sedny consequat,sit ametey."
+  },
+  {
+    title: 'Proper Roasting',
+    image: 'service_2.jpeg',
+    description: "Curabitur semper erat a lacusey sedny consequat,sit ametey."
+  },
+  {
+    title: 'Place to Get Lost',
+    image: 'service_3.jpeg',
+    description: "Curabitur semper erat a lacusey sedny consequat,sit ametey."
+  }
+]
 
 </script>
 
@@ -21,12 +40,28 @@
       <NuxtImg src="/images/hero_section.png" class="w-full h-full object-right aspect-square object-cover"/>
     </div>
   </section>
-  <section>
-    <div class="max-w-sm bg-[#D48A5C] max-h-64 min-h-60 h-auto relative">
-      <div class="max-w-sm  max-h-64 min-h-60 absolute -top-8 -right-6">
-        <CardProductCard title="Best Coffee Flavor" image="service_1.jpeg" description="Curabitur semper erat a lacusey sedny consequat,sit ametey." />
+  <section class="flex justify-between items-center w-full border-2 mt-24">
+    <div class="max-w-sm bg-[#D48A5C] min-w-80 max-h-64 min-h-60 h-auto relative"
+         v-for="(service,index) in productService" :key="index">
+      <div class="max-w-sm  min-w-80 max-h-64 min-h-60 absolute -top-8 -right-6 overflow-hidden">
+        <CardProductCard :title="service.title" :image="service.image" :description="service.description"
+                         :index="index < 10 ? '0'+index+1 : (index+1) + ''"/>
       </div>
     </div>
+  </section>
+  <section class="w-full h-dvh bg-[url('/images/background_service.jpeg')] bg-contain bg-center bg-no-repeat relative">
+    <div class="absolute flex h-full w-full flex-col items-center justify-center" >
+      <h3 class="text-[55px] mb-4">
+        Roasted CoffeeFor You
+      </h3>
+      <p class="max-w-2xl text-center">
+        Donec et nibh maximus, congue est eu, mattis nunc. Praesent utquam quis quam venenatis fringilla. Morbi
+        vestibulum id tellusmmodo mattis. Aliquam erat volutpat.
+      </p>
+      <button class="md:h-11 bg-secondary mt-4 w-32 text-white text-base shadow-lg ">Explore More</button>
+
+    </div>
+
   </section>
 </template>
 
