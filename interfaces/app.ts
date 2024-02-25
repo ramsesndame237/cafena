@@ -7,5 +7,6 @@ export interface IProductService {
     title: string,
     image: string,
     description?: string,
-    index?: string
+    index?: string,
+    price?:string
 }

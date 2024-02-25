@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <TheHeader/>
+  <div class="px-36">
+    <TheHeader/>
+  </div>
   <main>
     <NuxtPage/>
   </main>
