@@ -49,7 +49,23 @@ const most_popular_product: IProductService[] = [
     price: '$29'
   }
 ]
-
+const best_product = [
+  {
+    image: '/images/best_product_1.png',
+    title: 'Vicaragua Coffee Beans',
+    price: '$25'
+  },
+  {
+    image: '/images/best_product_2.png',
+    title: 'Americano Coffee',
+    price: '$25'
+  },
+  {
+    image: '/images/best_product_3.png',
+    title: 'Virgin Coffee Gred',
+    price: '$25'
+  },
+]
 </script>
 
 <template>
@@ -81,7 +97,8 @@ const most_popular_product: IProductService[] = [
         </div>
       </div>
     </section>
-    <section class="w-full h-dvh bg-[url('/images/background_service.jpeg')] bg-contain bg-center bg-no-repeat relative">
+    <section
+        class="w-full h-dvh bg-[url('/images/background_service.jpeg')] bg-contain bg-center bg-no-repeat relative">
       <div class="absolute flex h-full w-full flex-col items-center justify-center">
         <h3 class="text-[55px] mb-4">
           Roasted CoffeeFor You
@@ -137,8 +154,8 @@ const most_popular_product: IProductService[] = [
 
   </section>
 
-  <div class="px-36">
-    <div class="flex items-center w-full justify-between">
+  <section class="px-36">
+    <div class="flex items-center w-full justify-between py-20">
       <h3 class="font-medium text-[55px] text-black">
         Cafena Best Product
       </h3>
@@ -146,11 +163,21 @@ const most_popular_product: IProductService[] = [
         Cafena Best Product
       </button>
     </div>
-    <div>
-      <CardBestProductCard  />
+    <div class="flex gap-7">
+      <div class="h-screen max-h-[454px] max-w-sm" v-for="(product,index) in  best_product">
+        <CardBestProductCard :product="product" :key="index"/>
+      </div>
     </div>
+    <div class="flex items-center flex-col">
+      <button class="md:h-11 bg-secondary mt-4 min-w-32 px-4 text-white text-base shadow-lg ">
+        CUSTOMER FEEDBACK
+      </button>
+      <h3 class="text-[55px] mb-12">
+        OUR CUSTOMER REVIEW
+      </h3>
 
-  </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
