@@ -17,7 +17,6 @@ body{
 }
 
 #__nuxt{
-    border:solid;
     height: 100%;
     max-width: 1440px;
     @apply mx-auto h-full bg-primary

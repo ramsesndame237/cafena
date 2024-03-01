@@ -9,6 +9,7 @@
   <main>
     <NuxtPage/>
   </main>
+  <the-footer/>
 </template>
 
 <style scoped>
