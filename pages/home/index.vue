@@ -143,8 +143,8 @@ onMounted(() => {
       </div>
     </section>
     <section
-        class="w-full h-dvh bg-[url('/images/background_service.jpeg')] bg-contain bg-center bg-no-repeat relative">
-      <div class="absolute flex h-full w-full flex-col items-center justify-center">
+        class="w-full h-dvh max-h-[729px] mt-[81px] mb-[141px] bg-[url('/images/background_service.jpeg')] bg-cover bg-center bg-no-repeat relative">
+      <div class="absolute flex h-full w-full flex-col items-center justify-center bg-[rgba(0,0,0,0.4)]">
         <h3 class="text-[55px] mb-4">
           Roasted CoffeeFor You
         </h3>
